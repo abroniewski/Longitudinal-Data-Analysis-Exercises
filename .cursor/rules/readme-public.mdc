@@ -1,0 +1,121 @@
+---
+alwaysApply: false
+description: "Generate and maintain a public-facing README.md that supports both a decision-maker skim and a developer run-through."
+globs:
+  - "**/README.md"
+---
+
+# README Authoring Rules (Public Repos)
+
+## Primary goal
+Write a README that works for:
+1) A decision maker skimming in 20 seconds.
+2) A developer wanting to run or evaluate the project.
+
+Optimise for clarity, credibility, and concrete outcomes. Avoid fluff.
+
+## Voice and formatting
+- Use UK English spelling.
+- No em dashes. Use periods, commas, or semicolons.
+- Short paragraphs. Use headings and bullets. Avoid walls of text.
+- Prefer specific nouns over buzzwords.
+- If something is a PoC, demo, internal tool, or archived, say so plainly.
+
+## Required README sections (in this order)
+Always include these sections unless the project truly cannot support them. If a section is not applicable, include it with a brief note.
+
+1. **Project Name**
+   - Title matches repo name.
+   - Add badges only if meaningful (CI, licence). Do not add vanity badges.
+
+2. **One-line summary**
+   - One sentence: what it is, who it is for, and why it exists.
+
+3. **The Problem**
+   - 2 to 6 bullets describing the real-world pain or constraint.
+   - Mention why common alternatives were insufficient (one line).
+
+4. **The Approach**
+   - Explain at system level using:
+     - Inputs
+     - Processing
+     - Outputs
+   - Avoid deep implementation details.
+
+5. **Demo**
+   - Prefer: GIF or screenshot.
+   - If a live demo exists, link it.
+   - If no visuals exist, include a short "What you would see" description.
+
+6. **Value Delivered**
+   - 2 to 5 bullets.
+   - Quantify when possible (time saved, cost avoided, accuracy improved).
+   - If estimates are used, label them as estimates and state the assumption.
+
+7. **Scope & Status**
+   - Project type: Production / Internal Tool / PoC / Demo / Research / Archived
+   - Current state: Active / Paused / Archived
+   - Known limitations: 2 to 5 bullets
+   - Explicitly state what this project does not attempt to solve.
+
+8. **Tech Stack**
+   - Short list: frontend, backend, data, infra, AI/ML libraries.
+   - Keep it to what is actually used in this repo.
+
+9. **Getting Started**
+   - Only include runnable steps that work.
+   - Include prerequisites (runtime, package manager, external services).
+   - Provide a minimal install + first run path.
+   - Prefer copy-paste commands.
+
+10. **Usage**
+   - Show common commands and example invocations.
+   - If there is a CLI, show 2 to 4 core examples.
+   - If there is an API, show a minimal request and response shape.
+
+11. **Configuration**
+   - Document required env vars and defaults.
+   - Provide a `.env.example` reference if it exists.
+   - Never include secrets.
+
+12. **Project Structure (optional)**
+   - Include only if the repo is non-trivial.
+   - Provide a short tree and a one-line explanation per folder.
+
+13. **Testing**
+   - Show how to run tests.
+   - If tests do not exist, say: "Tests: not implemented" and optionally list next-step intentions.
+
+14. **Roadmap**
+   - 3 to 8 bullets max.
+   - Separate "Next" from "Later".
+   - If not actively maintained, explicitly say so and keep this section short.
+
+15. **License**
+   - State SPDX name and link to LICENSE.
+
+16. **Credits / Acknowledgements**
+   - Mention major dependencies, datasets, inspirations, or upstream forks.
+   - If forked, state what changed.
+
+17. **Contact / Support**
+   - How to open issues.
+   - Optional: contact email or website link.
+
+## Content rules
+- Use concrete examples specific to this project.
+- Do not invent metrics, clients, or results.
+- Do not claim production use unless confirmed in the repo context.
+- If the repo is part of a larger system, add a short "Related Work" list with links to sibling repos.
+
+## When updating an existing README
+- Preserve useful content. Rewrite only what is unclear, outdated, or inconsistent with these rules.
+- Fix typos and formatting.
+- Ensure the top of the README communicates purpose before installation.
+
+## Output expectations
+- Produce a complete README.md, not a draft outline.
+- Include at least one Demo asset placeholder if none exists:
+  - "Add screenshot: docs/images/demo.png"
+- Keep the full README concise:
+  - Target 60 to 180 lines for most repos.
